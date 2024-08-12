@@ -11,6 +11,9 @@
 		EBC72EB22C69BA7900469F48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC72EB12C69BA7900469F48 /* ContentView.swift */; };
 		EBC72EB42C69BA7A00469F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC72EB32C69BA7A00469F48 /* Assets.xcassets */; };
 		EBC72EB72C69BA7A00469F48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC72EB62C69BA7A00469F48 /* Preview Assets.xcassets */; };
+		EBC72EBE2C69BA9500469F48 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC72EBD2C69BA9500469F48 /* AudioEngine.swift */; };
+		EBC72EC12C69BAA800469F48 /* PianoKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = EBC72EC02C69BAA800469F48 /* PianoKeyboard */; };
+		EBC72EC32C69BABF00469F48 /* soundfont.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = EBC72EC22C69BABF00469F48 /* soundfont.sf2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		EBC72EB12C69BA7900469F48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBC72EB32C69BA7A00469F48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBC72EB62C69BA7A00469F48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBC72EBD2C69BA9500469F48 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		EBC72EC22C69BABF00469F48 /* soundfont.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundfont.sf2; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC72EC12C69BAA800469F48 /* PianoKeyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +57,10 @@
 		EBC72EAE2C69BA7900469F48 /* PlayPianoiPad */ = {
 			isa = PBXGroup;
 			children = (
+				EBC72EC22C69BABF00469F48 /* soundfont.sf2 */,
 				EBC72EAF2C69BA7900469F48 /* PlayPianoiPadApp.swift */,
 				EBC72EB12C69BA7900469F48 /* ContentView.swift */,
+				EBC72EBD2C69BA9500469F48 /* AudioEngine.swift */,
 				EBC72EB32C69BA7A00469F48 /* Assets.xcassets */,
 				EBC72EB52C69BA7A00469F48 /* Preview Content */,
 			);
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = PlayPianoiPad;
+			packageProductDependencies = (
+				EBC72EC02C69BAA800469F48 /* PianoKeyboard */,
+			);
 			productName = PlayPianoiPad;
 			productReference = EBC72EAC2C69BA7900469F48 /* PlayPianoiPad.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = EBC72EA32C69BA7900469F48;
+			packageReferences = (
+				EBC72EBF2C69BAA800469F48 /* XCRemoteSwiftPackageReference "PianoKeyboard" */,
+			);
 			productRefGroup = EBC72EAD2C69BA7900469F48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC72EB72C69BA7A00469F48 /* Preview Assets.xcassets in Resources */,
+				EBC72EC32C69BABF00469F48 /* soundfont.sf2 in Resources */,
 				EBC72EB42C69BA7A00469F48 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC72EBE2C69BA9500469F48 /* AudioEngine.swift in Sources */,
 				EBC72EB22C69BA7900469F48 /* ContentView.swift in Sources */,
 				EBC72EB02C69BA7900469F48 /* PlayPianoiPadApp.swift in Sources */,
 			);
@@ -344,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EBC72EBF2C69BAA800469F48 /* XCRemoteSwiftPackageReference "PianoKeyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/garynewby/PianoKeyboard.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EBC72EC02C69BAA800469F48 /* PianoKeyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBC72EBF2C69BAA800469F48 /* XCRemoteSwiftPackageReference "PianoKeyboard" */;
+			productName = PianoKeyboard;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EBC72EA42C69BA7900469F48 /* Project object */;
 }
